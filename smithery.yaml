@@ -1,0 +1,37 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    properties:
+      email:
+        type: string
+        description: Optional email to use with Crossref API for higher priority access.
+          If not provided, the server will run with default settings.
+      port:
+        type: number
+        default: 8000
+        description: Port to run the MCP server on.
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    config => {
+      // Set environment variable if email provided
+      const env = {};
+      if (config.email) {
+        env['CROSSREF_EMAIL'] = config.email;
+      }
+      // Set port; default is 8000
+      const port = config.port || 8000;
+      // The server is launched by running crossref_server.py
+      return {
+        command: 'python',
+        args: ['crossref_server.py', String(port)],
+        env: env
+      };
+    }
+  exampleConfig:
+    email: user@example.com
+    port: 8000
