@@ -1,4 +1,5 @@
 # Crossref MCP Server
+[![smithery badge](https://smithery.ai/badge/@JackKuo666/crossref-mcp-server)](https://smithery.ai/server/@JackKuo666/crossref-mcp-server)
 
 🔍 Enable AI assistants to search and access academic paper metadata through Crossref using a simple MCP interface.
 
@@ -19,6 +20,16 @@ The Crossref MCP Server provides a bridge between AI assistants and Crossref's d
 - FastMCP library
 
 ### Installation
+
+#### Installing via Smithery
+
+To install crossref-mcp-server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@JackKuo666/crossref-mcp-server):
+
+```bash
+npx -y @smithery/cli install @JackKuo666/crossref-mcp-server --client claude
+```
+
+#### Installing Manually
 
 1. Clone the repository:
    ```
