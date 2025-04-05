@@ -22,8 +22,8 @@ The Crossref MCP Server provides a bridge between AI assistants and Crossref's d
 
 1. Clone the repository:
    ```
-   git clone https://github.com/JackKuo666/crossref-MCP-Server.git
-   cd crossref-MCP-Server
+   git clone https://github.com/JackKuo666/Crossref-MCP-Server.git
+   cd Crossref-MCP-Server
    ```
 
 2. Install the required dependencies:
@@ -64,7 +64,7 @@ Add this configuration to your `cline_mcp_settings.json` or `claude_desktop_conf
     "crossref": {
       "command": "C:\\Users\\YOUR\\PATH\\miniconda3\\envs\\mcp_server\\python.exe",
       "args": [
-        "D:\\code\\YOUR\\PATH\\crossref-MCP-Server\\crossref_server.py"
+        "D:\\code\\YOUR\\PATH\\Crossref-MCP-Server\\crossref_server.py"
       ],
       "env": {},
       "disabled": false,
